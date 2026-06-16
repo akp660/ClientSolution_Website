@@ -9,10 +9,10 @@ const Navbar = () => {
           Client Company<span>.ai</span>
         </div>
         <nav className="nav-links">
-          <a href="#services">Services</a>
+          {/* <a href="#services">Services</a>
           <a href="#solutions">Solutions</a>
           <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="#contact">Contact</a> */}
         </nav>
         <div className="nav-actions">
           <button className="btn-primary">Get Consultation</button>
