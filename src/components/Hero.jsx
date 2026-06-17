@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="hero-content animate-fade-in-up">
           <div className="hero-badge">🚀 Custom Software Solutions for Growing Businesses</div>
           <h1 className="hero-title">
-            Build Better Business Software with <span>Client Company.ai</span>
+            Build Better Business Software with <span>Client Solutions.ai</span>
           </h1>
           <p className="hero-subtitle">
             We help small and mid-sized businesses streamline operations with custom CRM systems, billing software, web applications, and mobile apps designed specifically for their workflows.

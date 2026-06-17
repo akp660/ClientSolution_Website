@@ -6,7 +6,7 @@ const Navbar = () => {
     <header className="navbar">
       <div className="container navbar-container">
         <div className="logo">
-          Client Company<span>.ai</span>
+          Client Solutions<span>.ai</span>
         </div>
         <nav className="nav-links">
           {/* <a href="#services">Services</a>
