@@ -20,7 +20,7 @@ const Cta = () => {
           <div className="testimonial-card">
             <div className="quote-icon">❝</div>
             <p className="quote-text">
-              "Client Solutions.Ai transformed our customer management process. Their CRM solution helped us improve team productivity and track sales more effectively."
+              "Client Solution.Ai transformed our customer management process. Their CRM solution helped us improve team productivity and track sales more effectively."
             </p>
             <div className="author">
               <h4>Business Owner</h4>
