@@ -127,3 +127,26 @@ img {
   color: var(--primary);
   background: var(--primary-bg);
 }
+
+@media (max-width: 768px) {
+  body {
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  #root {
+    width: min(100%, 430px);
+    max-width: 430px;
+    margin: 0 auto;
+    border-inline: none;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+}

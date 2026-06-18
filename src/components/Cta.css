@@ -111,10 +111,39 @@
 
 @media (max-width: 768px) {
   .cta-box {
-    padding: 40px 24px;
+    padding: 36px 20px;
+    margin-bottom: 56px;
+  }
+
+  .cta-content h2 {
+    font-size: 28px;
+  }
+
+  .cta-content p {
+    font-size: 15px;
+  }
+
+  .cta-content > div {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-content .btn-primary,
+  .cta-content .btn-secondary {
+    width: 100%;
+    text-align: center;
   }
   
   .testimonial-section {
     justify-content: flex-start;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+    padding: 28px 20px;
+  }
+
+  .quote-text {
+    font-size: 15px;
   }
 }

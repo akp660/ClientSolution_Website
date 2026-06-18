@@ -45,3 +45,28 @@
   align-items: center;
   gap: 16px;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 14px 0;
+  }
+
+  .navbar-container {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-actions {
+    margin-left: auto;
+  }
+
+  .nav-actions .btn-primary {
+    padding: 10px 16px;
+    font-size: 13px;
+    box-shadow: none;
+  }
+}
