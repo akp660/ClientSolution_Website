@@ -1,9 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.css';
 
 const Hero = () => {
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setCursorPos({ x: e.clientX, y: e.clientY });
+    };
+
+    const handleKeyDown = (e) => {
+      const step = 10;
+      setCursorPos((prev) => {
+        let newPos = { ...prev };
+        if (e.key === 'ArrowUp') newPos.y -= step;
+        if (e.key === 'ArrowDown') newPos.y += step;
+        if (e.key === 'ArrowLeft') newPos.x -= step;
+        if (e.key === 'ArrowRight') newPos.x += step;
+        return newPos;
+      });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   return (
     <section className="hero">
+      <div className="tracking-circle" style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}></div>
       <div className="hero-background"></div>
       <div className="container hero-container">
         <div className="hero-content animate-fade-in-up">
