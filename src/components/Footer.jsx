@@ -14,9 +14,8 @@ const Footer = () => {
           <div className="footer-links">
             <div className="link-group">
               <h4>Contact</h4>
-              <a href="mailto:hello@clientcompany.ai">📧 hello@clientcompany.ai</a>
-              <a href="tel:+91XXXXXXXXXX">📞 +91 XXXXX XXXXX</a>
-              <a href="https://www.clientcompany.ai">🌐 www.clientcompany.ai</a>
+              <a href="mailto:bbsoftwarecompany@gmail.com">📧 bbsoftwarecompany</a>
+              <a href="https://www.linkedin.com/company/client-solution-ai/">🌐 Linkedin</a>
             </div>
             <div className="link-group">
               <h4>Company</h4>
