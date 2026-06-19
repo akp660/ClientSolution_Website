@@ -1,11 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Landing.css';
 
 const Landing = ({ onEnter, onLogin, onSignUp }) => {
   const [isHovered, setIsHovered] = useState(null);
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+
+useEffect(() => {
+  const handleMouseMove = (e) => {
+    setCursorPos({
+      x: e.clientX,
+      y: e.clientY,
+    });
+  };
+
+  window.addEventListener('mousemove', handleMouseMove);
+
+  return () => {
+    window.removeEventListener('mousemove', handleMouseMove);
+  };
+}, []);
+
+  
 
   return (
     <div className="landing-page">
+         <div
+    className="tracking-circle"
+    style={{
+      left: `${cursorPos.x}px`,
+      top: `${cursorPos.y}px`,
+    }}
+  ></div>
       {/* Navbar */}
       <header className="landing-navbar">
         <div className="landing-container navbar-content">
@@ -38,7 +63,7 @@ const Landing = ({ onEnter, onLogin, onSignUp }) => {
 
             {/* CTA Buttons */}
             <div className="landing-buttons">
-              <button className="btn-demo">Book your live Demo Now</button>
+              {/*<button className="btn-demo">Book your live Demo Now</button>*/}
               <button 
                 className="btn-discover"
                 onMouseEnter={() => setIsHovered('discover')}

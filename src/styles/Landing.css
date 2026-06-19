@@ -9,6 +9,29 @@
   display: flex;
   flex-direction: column;
 }
+.tracking-circle {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #8a4baf;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: all 0.08s linear;
+}
+
+.tracking-circle::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #8a4baf;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /* Navbar */
 .landing-navbar {
