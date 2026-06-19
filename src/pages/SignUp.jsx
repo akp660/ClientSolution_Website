@@ -3,8 +3,7 @@ import '../styles/Auth.css';
 
 const SignUp = ({ onBackToLanding }) => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    fullName: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -29,13 +28,13 @@ const SignUp = ({ onBackToLanding }) => {
     e.preventDefault();
     let newErrors = {};
 
-    if (!formData.firstName.trim()) {
-      newErrors.firstName = 'First name is required';
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = 'Full name is required';
     }
 
-    if (!formData.lastName.trim()) {
+    {/*if (!formData.lastName.trim()) {
       newErrors.lastName = 'Last name is required';
-    }
+    }*/}
 
     if (!formData.email) {
       newErrors.email = 'Email is required';
@@ -82,20 +81,20 @@ const SignUp = ({ onBackToLanding }) => {
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="firstName">First Name</label>
+              <label htmlFor="fullName">Full Name</label>
               <input
                 type="text"
-                id="firstName"
-                name="firstName"
+                id="fullName"
+                name="fullName"
                 placeholder=""
-                value={formData.firstName}
+                value={formData.fullName}
                 onChange={handleChange}
-                className={errors.firstName ? 'input-error' : ''}
+                className={errors.fullName ? 'input-error' : ''}
               />
-              {errors.firstName && <span className="error-message">{errors.firstName}</span>}
+              {errors.fullName && <span className="error-message">{errors.fullName}</span>}
             </div>
 
-            <div className="form-group">
+            {/*<div className="form-group">
               <label htmlFor="lastName">Last Name</label>
               <input
                 type="text"
@@ -107,7 +106,7 @@ const SignUp = ({ onBackToLanding }) => {
                 className={errors.lastName ? 'input-error' : ''}
               />
               {errors.lastName && <span className="error-message">{errors.lastName}</span>}
-            </div>
+            </div>*/}
           </div>
 
           <div className="form-group">
