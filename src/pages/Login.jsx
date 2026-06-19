@@ -37,12 +37,14 @@ const Login = ({ onBackToLanding }) => {
     <div className="auth-container">
       <div className="auth-card">
         <div className="auth-header">
-          <button className="back-btn" onClick={onBackToLanding}>
-            ← Back
-          </button>
-          <h1>Welcome Back</h1>
-          <p>Log in to your account</p>
-        </div>
+
+  <button className="back-btn" onClick={onBackToLanding}>
+    ← Back
+  </button>
+
+  <h1>Welcome Back</h1>
+  <p>Log in to your account</p>
+</div>
 
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
@@ -98,10 +100,10 @@ const Login = ({ onBackToLanding }) => {
         </form>
 
         <div className="auth-footer">
-          <p>Don't have an account? <span onClick={() => console.log('navigate to signup')}>Sign up here</span></p>
+          <p>New to our platform? <span onClick={() => console.log('navigate to signup')}>Create an Account</span></p>
         </div>
 
-        <div className="divider">
+        {/*<div className="divider">
           <span>OR</span>
         </div>
 
@@ -120,7 +122,7 @@ const Login = ({ onBackToLanding }) => {
       {/* Decorative circles */}
       <div className="circle circle-login-1"></div>
       <div className="circle circle-login-2"></div>
-    </div>
+    </div></div>
   );
 };
 

@@ -186,10 +186,10 @@ const SignUp = ({ onBackToLanding }) => {
         </form>
 
         <div className="auth-footer">
-          <p>Already have an account? <span onClick={() => console.log('navigate to login')}>Sign in here</span></p>
+          <p>Already have an account? <span onClick={() => console.log('navigate to login')}>Sign in instead</span></p>
         </div>
 
-        <div className="divider">
+        {/*<div className="divider">
           <span>OR</span>
         </div>
 
@@ -208,7 +208,7 @@ const SignUp = ({ onBackToLanding }) => {
       {/* Decorative circles */}
       <div className="circle circle-signup-1"></div>
       <div className="circle circle-signup-2"></div>
-    </div>
+    </div></div>
   );
 };
 
