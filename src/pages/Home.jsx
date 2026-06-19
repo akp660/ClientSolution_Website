@@ -7,10 +7,10 @@ import Process from '../components/Process';
 import Footer from '../components/Footer';
 import './Home.css';
 
-const Home = () => {
+const Home = ({ onBackToLanding }) => {
   return (
     <div className="home">
-      <Navbar />
+      <Navbar onBackToLanding={onBackToLanding} />
       <main>
         <Hero />
         <Services />

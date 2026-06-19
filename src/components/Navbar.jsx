@@ -1,11 +1,15 @@
 import React from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ onBackToLanding }) => {
   return (
     <header className="navbar">
       <div className="container navbar-container">
-        <div className="logo">
+        <div 
+          className="logo"
+          onClick={onBackToLanding}
+          style={{ cursor: 'pointer' }}
+        >
           Client Solution<span>.ai</span>
         </div>
         <nav className="nav-links">
