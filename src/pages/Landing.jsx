@@ -1,36 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Landing.css';
+import dashboardImg from '../assets/dashboard.png';
 
 const Landing = ({ onEnter, onLogin, onSignUp }) => {
   const [isHovered, setIsHovered] = useState(null);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
 
-useEffect(() => {
-  const handleMouseMove = (e) => {
-    setCursorPos({
-      x: e.clientX,
-      y: e.clientY,
-    });
-  };
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setCursorPos({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
 
-  window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove);
 
-  return () => {
-    window.removeEventListener('mousemove', handleMouseMove);
-  };
-}, []);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
-  
+
 
   return (
     <div className="landing-page">
-         <div
-    className="tracking-circle"
-    style={{
-      left: `${cursorPos.x}px`,
-      top: `${cursorPos.y}px`,
-    }}
-  ></div>
+      <div
+        className="tracking-circle"
+        style={{
+          left: `${cursorPos.x}px`,
+          top: `${cursorPos.y}px`,
+        }}
+      ></div>
       {/* Navbar */}
       <header className="landing-navbar">
         <div className="landing-container navbar-content">
@@ -38,10 +39,10 @@ useEffect(() => {
             <div className="logo-circle">CS</div>
             <span>Client Solution.Ai</span>
           </div>
-          <div className="nav-buttons">
+          {/*<div className="nav-buttons">
             <button className="btn-login" onClick={onLogin}>Log In</button>
             <button className="btn-signup" onClick={onSignUp}>Sign Up</button>
-          </div>
+          </div>*/}
         </div>
       </header>
 
@@ -56,15 +57,26 @@ useEffect(() => {
 
             {/* Main Heading */}
             <h1 className="landing-title">
-              AI-Powered Revenue Infrastructure That
-              <br />
-              <span className="title-highlight">Drives Industrial Sales</span>
-            </h1>
+            AI-Powered Revenue Infrastructure That
+            <br />
+            <span className="title-highlight">
+            Drives Industrial Sales
+           </span>
+           </h1>
+
+            {/* Dashboard Image */}
+            <div className="landing-dashboard-container">
+              <img
+                src={dashboardImg}
+                alt="Client Solution Dashboard"
+                className="landing-dashboard-img"
+              />
+            </div>
 
             {/* CTA Buttons */}
             <div className="landing-buttons">
               {/*<button className="btn-demo">Book your live Demo Now</button>*/}
-              <button 
+              <button
                 className="btn-discover"
                 onMouseEnter={() => setIsHovered('discover')}
                 onMouseLeave={() => setIsHovered(null)}
@@ -77,7 +89,7 @@ useEffect(() => {
 
           {/* Right side message */}
           <div className="landing-message">
-           {/*} <p>Welcome to our site, if you need help simply reply to this message, we are online and ready to help.</p>*/}
+            {/*} <p>Welcome to our site, if you need help simply reply to this message, we are online and ready to help.</p>*/}
           </div>
         </div>
 
