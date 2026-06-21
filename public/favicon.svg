@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Client Solution logo favicon">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#00d4ff" />
+      <stop offset="100%" stop-color="#003b8f" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#g)" />
+  <g transform="translate(8,8)" fill="#fff" font-family="Segoe UI, Roboto, Arial, sans-serif" font-weight="700">
+    <text x="6" y="36" font-size="28">CS</text>
+  </g>
+</svg>
