@@ -115,6 +115,8 @@ const Hero = () => {
                 <span style={{ height: '46%' }}></span>
                 <span style={{ height: '26%' }}></span>
                 <span style={{ height: '40%' }}></span>
+                {/* Test
+                Tset */}
               </div>
               <div className="hero-phone-legend">
                 <span><i className="legend-dot legend-blue"></i> Progress</span>
