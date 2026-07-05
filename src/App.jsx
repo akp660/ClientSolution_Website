@@ -5,14 +5,14 @@ import SignUp from './pages/SignUp';
 import Home from './pages/Home';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('landing');
+  const [currentPage, setCurrentPage] = useState('home');
 
   const handleNavigate = (page) => {
     setCurrentPage(page);
   };
 
   const handleBackToLanding = () => {
-    setCurrentPage('landing');
+    setCurrentPage('home');
   };
 
   return (
