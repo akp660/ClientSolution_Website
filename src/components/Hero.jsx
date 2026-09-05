@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import ConsultationModal from './ConsultationModal';
 import './Hero.css';
 
 const Hero = () => {
   const [activeMenu, setActiveMenu] = useState('dashboard');
   const [timeframe, setTimeframe] = useState('weekly');
+  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
 
   return (
     <section className="hero">
@@ -20,13 +22,17 @@ const Hero = () => {
           </p>
 
           <div className="hero-actions">
-            <a href="mailto:contact@clientsolution.ai" className="btn-primary hero-btn-main">
+            <button 
+              type="button" 
+              className="btn-primary hero-btn-main" 
+              onClick={() => setIsConsultationOpen(true)}
+            >
               <span>Get Free Consultation</span>
               <svg className="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
-            </a>
+            </button>
             <a href="#download" className="btn-secondary hero-btn-ghost">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -367,6 +373,12 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* Floating Bottom-Right Consultation Modal */}
+      <ConsultationModal 
+        isOpen={isConsultationOpen} 
+        onClose={() => setIsConsultationOpen(false)} 
+      />
     </section>
   );
 };
