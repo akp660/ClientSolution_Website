@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="container hero-container">
         <div className="hero-content animate-fade-in-up">
           <h1 className="hero-title">
-            Software Solutions That <span>Drive Growth</span> & Scale Operations
+            Software Solutions That Drive <span className="hero-gradient-text">Growth &amp; Scale</span> Operations
           </h1>
 
           <p className="hero-subtitle">

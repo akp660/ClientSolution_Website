@@ -100,7 +100,7 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <section className="section services" id="services">
+    <section className="section services" id="products">
       {/* Background Ambient Accents */}
       <div className="services-bg-glow glow-1"></div>
       <div className="services-bg-glow glow-2"></div>

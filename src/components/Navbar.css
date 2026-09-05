@@ -1,5 +1,9 @@
+/* ─────────────────────────────────────────────────────────────
+   Navbar Component Styling with Products Dropdown
+   ───────────────────────────────────────────────────────────── */
+
 .navbar {
-  padding: 20px 0;
+  padding: 18px 0;
   background-color: transparent;
   position: absolute;
   top: 0;
@@ -17,10 +21,9 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid #eef2f6;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
-
 
 .navbar-container {
   display: flex;
@@ -31,56 +34,194 @@
 .logo {
   font-size: 24px;
   font-weight: 800;
-  color: var(--text-main);
+  color: #1a1a2e;
   letter-spacing: -0.5px;
 }
 
 .logo span {
-  color: var(--primary);
+  color: #7c3aed;
 }
 
+/* Navigation Links */
 .nav-links {
   display: flex;
-  gap: 32px;
+  align-items: center;
+  gap: 20px;
 }
 
-.nav-links a {
+.nav-item-link {
   font-size: 15px;
-  font-weight: 500;
-  color: var(--text-muted);
-}
-
-.nav-links a:hover {
-  color: var(--primary);
-}
-
-.nav-actions {
+  font-weight: 600;
+  color: #4b5563;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-item-link:hover,
+.nav-item-link.is-active {
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.07);
+}
+
+.chevron-icon {
+  transition: transform 0.25s ease;
+}
+
+.chevron-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Products Dropdown Menu Panel
+   ───────────────────────────────────────────────────────────── */
+
+.nav-dropdown-wrapper {
+  position: relative;
+}
+
+.products-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 580px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #ede9ff;
+  box-shadow: 0 20px 45px rgba(124, 58, 237, 0.14), 0 4px 12px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+  z-index: 1000;
+  animation: dropdownEnter 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top left;
+}
+
+@keyframes dropdownEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.dropdown-header {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f3f0ff;
+  margin-bottom: 12px;
+}
+
+.dropdown-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: #7c3aed;
+  text-transform: uppercase;
+}
+
+.dropdown-subtitle {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.products-grid-menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.product-menu-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.product-menu-item:hover {
+  background: #fbf9ff;
+  border-color: #ede9ff;
+  transform: translateY(-1px);
+}
+
+.product-menu-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #f3ebff;
+  color: #7c3aed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.product-menu-item:hover .product-menu-icon {
+  transform: scale(1.06);
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+.product-menu-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-menu-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.25;
+}
+
+.product-menu-desc {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 2px;
+  line-height: 1.35;
+}
+
+.dropdown-footer {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #f3f0ff;
+  text-align: right;
+}
+
+.view-all-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #7c3aed;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.view-all-link:hover {
+  color: #6d28d9;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    padding: 14px 0;
+  .products-dropdown-menu {
+    width: 300px;
+    left: -20px;
   }
 
-  .navbar-container {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-
-  .nav-actions {
-    margin-left: auto;
-  }
-
-  .nav-actions .btn-primary {
-    padding: 10px 16px;
-    font-size: 13px;
-    box-shadow: none;
+  .products-grid-menu {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

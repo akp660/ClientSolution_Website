@@ -5,8 +5,8 @@
 .process-section {
   position: relative;
   background: #ffffff;
-  padding: 70px 0 80px;
-  overflow: hidden;
+  padding: 20px 0 32px;
+  overflow: visible;
 }
 
 /* Background Ambient Glow Accents */
@@ -150,11 +150,6 @@
   z-index: 10;
 }
 
-.process-step-card.is-active {
-  border-color: var(--primary);
-  box-shadow: 0 20px 45px -10px rgba(138, 75, 175, 0.25);
-}
-
 /* Card Header: Step Badge & SVG Icon Box */
 .step-card-header {
   display: flex;
@@ -294,8 +289,7 @@
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
 }
 
-.process-step-card:hover .card-bottom-indicator,
-.process-step-card.is-active .card-bottom-indicator {
+.process-step-card:hover .card-bottom-indicator {
   opacity: 1;
   transform: scaleX(1);
 }

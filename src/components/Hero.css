@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  padding: 160px 0 60px;
+  padding: 160px 0 20px;
   overflow: hidden;
 }
 
@@ -68,12 +68,12 @@
   letter-spacing: -1px;
 }
 
+.hero-title span,
 .hero-gradient-text {
-  background: linear-gradient(135deg, #8a4baf 0%, #2e8cff 50%, #8a4baf 100%);
-  background-size: 200% auto;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 60%, #6d28d9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientShift 6s ease infinite;
+  display: inline-block;
 }
 
 .hero-subtitle {

@@ -7,8 +7,8 @@
 .app-availability-section {
   position: relative;
   background: #ffffff;
-  padding: 28px 0 20px;
-  overflow: hidden;
+  padding: 32px 0 20px;
+  overflow: visible;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: #0f172a;
 }
@@ -87,7 +87,7 @@
 /* Top Right Handwritten Annotation inside Card */
 .handwritten-annotation {
   position: absolute;
-  top: -20px;
+  top: -12px;
   right: 48px;
   z-index: 3;
   display: flex;

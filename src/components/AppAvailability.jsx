@@ -96,7 +96,7 @@ const AppAvailability = () => {
             <svg className="curved-arrow" width="38" height="34" viewBox="0 0 45 40" fill="none">
               <path d="M 38 6 C 20 6, 6 18, 12 35 M 4 27 L 12 36 L 20 28" stroke="#7c3aed" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <span className="handwritten-text">One App.<br/>Every Device.</span>
+            <span className="handwritten-text">Software On<br/>Every Platform.</span>
           </div>
 
           <div className="store-banner-content">

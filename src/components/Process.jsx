@@ -66,7 +66,6 @@ const processSteps = [
 const Process = () => {
   const sectionRef = useRef(null);
   const [visibleSteps, setVisibleSteps] = useState([0, 1, 2, 3]);
-  const [activeStep, setActiveStep] = useState(null);
 
   useEffect(() => {
     const stepElements = sectionRef.current?.querySelectorAll('.process-step-card');
@@ -136,16 +135,14 @@ const Process = () => {
           <div className="process-grid">
             {processSteps.map((item, index) => {
               const isVisible = visibleSteps.includes(index);
-              const isActive = activeStep === index;
               return (
                 <div 
-                  className={`process-step-card ${isVisible ? 'is-visible' : ''} ${isActive ? 'is-active' : ''}`} 
+                  className={`process-step-card ${isVisible ? 'is-visible' : ''}`} 
                   key={index}
                   data-index={index}
                   style={{ '--step-delay': `${index * 0.15}s` }}
                   onMouseMove={handleMouseMove}
                   onMouseLeave={handleMouseLeave}
-                  onClick={() => setActiveStep(isActive ? null : index)}
                 >
                   {/* Dynamic Mouse Cursor Glow Spotlight */}
                   <div className="card-mouse-spotlight"></div>
