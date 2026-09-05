@@ -1,0 +1,91 @@
+.scroll-animation-section {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000; /* Fallback for dark theme */
+}
+
+/* The moving gradient background */
+.gradient-background {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, #001229 0%, #004b73 30%, #0087a8 60%, #ff8c00 100%);
+  background-size: 200% 200%;
+  animation: moveGradient 15s ease-in-out infinite alternate;
+  z-index: 1;
+  opacity: 0.8;
+  filter: blur(40px); /* Creates the soft, blended "bubble" look */
+}
+
+@keyframes moveGradient {
+  0% {
+    transform: translate(0, 0) scale(1);
+    background-position: 0% 50%;
+  }
+  50% {
+    transform: translate(-10%, 10%) scale(1.1);
+    background-position: 100% 50%;
+  }
+  100% {
+    transform: translate(10%, -10%) scale(1.2);
+    background-position: 50% 100%;
+  }
+}
+
+/* Add a dark overlay to make text pop */
+.scroll-animation-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Darkens the gradient slightly */
+  z-index: 2;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+/* Container for the text */
+.text-container {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+/* The reveal text styling */
+.reveal-text {
+  font-size: clamp(3rem, 8vw, 6rem); /* Responsive sizing */
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: transparent;
+  background: linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+  /* Initial state before reveal */
+  opacity: 0;
+  transform: translateY(50px) scale(0.9);
+  transition: opacity 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* The highlighted part of the text (.ai) */
+.highlight {
+  color: transparent;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* State when section is visible (triggered by IntersectionObserver) */
+.text-container.visible .reveal-text {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}

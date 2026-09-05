@@ -8,6 +8,20 @@
   z-index: 100;
 }
 
+/* Fixed variant — used on pages like Privacy Policy */
+.navbar--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+}
+
+
 .navbar-container {
   display: flex;
   justify-content: space-between;

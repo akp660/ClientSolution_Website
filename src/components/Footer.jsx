@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="footer">
       <div className="container">
@@ -38,8 +40,24 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Client Solution.ai. All rights reserved.</p>
           <div className="footer-legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
+            <button
+              className="footer-legal-btn"
+              onClick={() => {
+                navigate('/privacy');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            >
+              Privacy Policy
+            </button>
+            <button
+              className="footer-legal-btn"
+              onClick={() => {
+                navigate('/terms');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            >
+              Terms &amp; Conditions
+            </button>
           </div>
         </div>
       </div>

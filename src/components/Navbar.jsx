@@ -1,9 +1,9 @@
 import React from 'react';
 import './Navbar.css';
 
-const Navbar = ({ onBackToLanding }) => {
+const Navbar = ({ onBackToLanding, fixed }) => {
   return (
-    <header className="navbar">
+    <header className={`navbar${fixed ? ' navbar--fixed' : ''}`}>
       <div className="container navbar-container">
         <div 
           className="logo"
