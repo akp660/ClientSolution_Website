@@ -19,9 +19,6 @@ const Navbar = ({ onBackToLanding, fixed }) => {
           <a href="#about">About</a>
           <a href="#contact">Contact</a> */}
         </nav>
-        <div className="nav-actions">
-          <button className="btn-primary">Get Consultation</button>
-        </div>
       </div>
     </header>
   );

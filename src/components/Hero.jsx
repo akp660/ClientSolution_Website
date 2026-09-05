@@ -1,243 +1,60 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Hero.css';
 
 const Hero = () => {
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setCursorPos({ x: e.clientX, y: e.clientY });
-    };
-
-    const handleKeyDown = (e) => {
-      const step = 10;
-      setCursorPos((prev) => {
-        let newPos = { ...prev };
-        if (e.key === 'ArrowUp') newPos.y -= step;
-        if (e.key === 'ArrowDown') newPos.y += step;
-        if (e.key === 'ArrowLeft') newPos.x -= step;
-        if (e.key === 'ArrowRight') newPos.x += step;
-        return newPos;
-      });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
+  const [activeMenu, setActiveMenu] = useState('dashboard');
+  const [timeframe, setTimeframe] = useState('weekly');
 
   return (
     <section className="hero">
-      <div className="tracking-circle" style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}></div>
       <div className="hero-background"></div>
+      
       <div className="container hero-container">
         <div className="hero-content animate-fade-in-up">
-          {/* <div className="hero-badge">🚀 Custom Software Solutions for Growing Businesses</div> */}
           <h1 className="hero-title">
-            Build Better Business Software with <span>Client Solution.ai</span>
+            Software Solutions That <span>Drive Growth</span> & Scale Operations
           </h1>
-          {/* <p className="hero-subtitle">
-            We help small and mid-sized businesses streamline operations with custom CRM systems, billing software, web applications, and mobile apps designed specifically for their workflows.
-          </p> */}
-          {/* <div className="hero-actions">
-            <button className="btn-primary">Get Free Consultation →</button>
-            <button className="btn-secondary" style={{ border: '1px solid var(--border)', background: 'var(--surface)' }}>▶ View Our Services</button>
-          </div> */}
-          {/* <div className="hero-features-list">
-            <span>✓ Custom Solutions</span>
-            <span>✓ On-Time Delivery</span>
-            <span>✓ Reliable Support</span>
-          </div> */}
-        </div>
 
-        <div className="hero-mobile-visual animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <div className="hero-phone-shell">
-            <div className="hero-phone-status">
-              <span>9:41</span>
-              <div className="hero-phone-status-icons">
-                <span>◔</span>
-                <span>◔◔</span>
-                <span>▮▮▮</span>
-              </div>
-            </div>
+          <p className="hero-subtitle">
+            We build simple, reliable, and scalable software platforms — from custom CRMs and billing engines to web and mobile apps designed around your unique business workflows.
+          </p>
 
-            <div className="hero-phone-header">
-              <div>
-                <h3>Dashboard</h3>
-                <p>Project Summary</p>
-              </div>
-              <div className="hero-phone-header-actions">
-                <div className="hero-phone-avatar">CS</div>
-                <div className="hero-phone-bell">🔔</div>
-              </div>
-            </div>
+          <div className="hero-actions">
+            <a href="mailto:contact@clientsolution.ai" className="btn-primary hero-btn-main">
+              <span>Get Free Consultation</span>
+              <svg className="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#download" className="btn-secondary hero-btn-ghost">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Now</span>
+            </a>
+          </div>
 
-            <div className="hero-phone-pills">
-              <span className="hero-phone-pill active">Overview</span>
-              <span className="hero-phone-pill">Tasks</span>
-              <span className="hero-phone-pill">Reports</span>
-            </div>
-
-            <div className="hero-phone-grid">
-              <article className="hero-phone-card hero-phone-card-purple">
-                <div className="hero-phone-card-value">24</div>
-                <div className="hero-phone-card-label">In Progress</div>
-              </article>
-              <article className="hero-phone-card hero-phone-card-pink">
-                <div className="hero-phone-card-value">56</div>
-                <div className="hero-phone-card-label">In Review</div>
-              </article>
-              <article className="hero-phone-card hero-phone-card-amber">
-                <div className="hero-phone-card-value">16</div>
-                <div className="hero-phone-card-label">On Hold</div>
-              </article>
-              <article className="hero-phone-card hero-phone-card-green">
-                <div className="hero-phone-card-value">45</div>
-                <div className="hero-phone-card-label">Completed</div>
-              </article>
-            </div>
-
-            <div className="hero-phone-chart-card">
-              <div className="hero-phone-section-title">
-                <h4>Project Statistics</h4>
-                <span>⋯</span>
-              </div>
-              <div className="hero-phone-bars" aria-hidden="true">
-                <span style={{ height: '24%' }}></span>
-                <span style={{ height: '58%' }}></span>
-                <span style={{ height: '34%' }}></span>
-                <span style={{ height: '52%' }}></span>
-                <span style={{ height: '18%' }}></span>
-                <span style={{ height: '46%' }}></span>
-                <span style={{ height: '26%' }}></span>
-                <span style={{ height: '40%' }}></span>
-              </div>
-              <div className="hero-phone-legend">
-                <span><i className="legend-dot legend-blue"></i> Progress</span>
-                <span><i className="legend-dot legend-pink"></i> Reviewed</span>
-                <span><i className="legend-dot legend-green"></i> Complete</span>
-              </div>
-            </div>
-
-            <div className="hero-phone-footer-grid">
-              <div className="hero-phone-footer-card">
-                <p>Total working hour</p>
-                <strong>50:25:06</strong>
-                <span className="hero-phone-chip hero-phone-chip-green">+ 34%</span>
-              </div>
-              <div className="hero-phone-footer-card">
-                <p>Total task activity</p>
-                <strong>125 Task</strong>
-                <span className="hero-phone-chip hero-phone-chip-blue">1.50%</span>
-              </div>
-            </div>
-
-            <div className="hero-phone-nav">
-              <span className="active">⌂</span>
-              <span>◫</span>
-              <span>＋</span>
-              <span>◔</span>
-              <span>◉</span>
-            </div>
+          <div className="hero-trust-highlights">
+            <span className="trust-item"><i className="trust-check">✓</i> Custom Architecture</span>
+            <span className="trust-item"><i className="trust-check">✓</i> Fast Delivery</span>
+            <span className="trust-item"><i className="trust-check">✓</i> 24/7 Dedicated Support</span>
           </div>
         </div>
 
-        {/* <div className="hero-visual animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <div className="mockup-dashboard">
-            <div className="dash-sidebar">
-              <div className="dash-logo"></div>
-              <div className="dash-nav-item active"></div>
-              <div className="dash-nav-item"></div>
-              <div className="dash-nav-item"></div>
-              <div className="dash-nav-item"></div>
-            </div>
-            <div className="dash-main">
-              <div className="dash-header">
-                <div className="dash-title">Dashboard</div>
-                <div className="dash-header-right">
-                  <div className="dash-search">Search...</div>
-                  <div className="dash-avatar"></div>
-                </div>
-              </div>
-              <div className="dash-content">
-                <div className="dash-row">
-                  <div className="dash-card primary-grad">
-                    <h5>Total Revenue</h5>
-                    <h3>$45,231.89</h3>
-                    <p>↑ 12.5% from last month</p>
-                  </div>
-                  <div className="dash-card">
-                    <h5>New Customers</h5>
-                    <h3>1,245</h3>
-                    <p style={{color: '#00b67a'}}>↑ 8.2% from last month</p>
-                  </div>
-                  <div className="dash-card tasks-card">
-                    <h5>Tasks</h5>
-                    <ul>
-                      <li><span className="chk done"></span> Follow up with leads</li>
-                      <li><span className="chk"></span> Send Proposal</li>
-                      <li><span className="chk"></span> Invoice #INV-00123</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="dash-row">
-                  <div className="dash-card flex-2">
-                    <h5>Recent Invoices</h5>
-                    <div className="dash-table">
-                      <div className="dash-tr"><span>INV-00123</span><span>Acme Corp</span><span className="status paid">Paid</span><span>$1,250.00</span></div>
-                      <div className="dash-tr"><span>INV-00122</span><span>Bright Solutions</span><span className="status paid">Paid</span><span>$950.00</span></div>
-                      <div className="dash-tr"><span>INV-00121</span><span>TechNova Inc.</span><span className="status pending">Pending</span><span>$2,300.00</span></div>
-                    </div>
-                  </div>
-                  <div className="dash-card">
-                    <h5>Sales Overview</h5>
-                    <div className="dash-chart">
-                      <div className="donut"></div>
-                      <div className="chart-legend">
-                        <div><span className="dot p"></span> CRM</div>
-                        <div><span className="dot b"></span> Web Apps</div>
-                        <div><span className="dot g"></span> Billing</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          
-          {/* Floating elements */}
-          {/* <div className="floating-card crm-float">
-            <div className="icon-small purple-bg">📊</div>
-            <div>
-              <h4>Custom CRM</h4>
-              <p>Manage leads & customers</p>
-            </div>
-          </div>
-          <div className="floating-card billing-float">
-            <div className="icon-small blue-bg">📄</div>
-            <div>
-              <h4>Billing Software</h4>
-              <p>Automate invoices</p>
-            </div>
-          </div>
-          <div className="floating-card web-float">
-            <div className="icon-small pink-bg">💻</div>
-            <div>
-              <h4>Web & Mobile Apps</h4>
-              <p>Scalable & secure</p>
-            </div>
-          </div> */}
-
-        <div className="hero-visual animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        {/* Dashboard Stage */}
+        <div 
+          className="hero-visual animate-fade-in-up" 
+          style={{ animationDelay: '0.2s' }}
+        >
           <div className="hero-dashboard-shell">
             <div className="hero-dashboard-glow hero-dashboard-glow-left"></div>
             <div className="hero-dashboard-glow hero-dashboard-glow-right"></div>
 
             <div className="hero-dashboard-card">
+              {/* Sidebar Menu */}
               <aside className="hero-sidebar">
                 <div className="hero-sidebar-brand">
                   <div className="hero-brand-mark">
@@ -245,128 +62,308 @@ const Hero = () => {
                   </div>
                   <div>
                     <h4>Client Solution</h4>
-                    <p>Dashboard</p>
+                    <p>Platform v2.4</p>
                   </div>
                 </div>
 
                 <div className="hero-sidebar-section">
                   <span className="hero-sidebar-label">Menu</span>
-                  <div className="hero-sidebar-item active">
+                  <button 
+                    type="button"
+                    className={`hero-sidebar-item ${activeMenu === 'dashboard' ? 'active' : ''}`}
+                    onClick={() => setActiveMenu('dashboard')}
+                  >
                     <span className="hero-sidebar-dot"></span>
                     <span>Dashboard</span>
-                  </div>
-                  <div className="hero-sidebar-item">
+                  </button>
+                  <button 
+                    type="button"
+                    className={`hero-sidebar-item ${activeMenu === 'clients' ? 'active' : ''}`}
+                    onClick={() => setActiveMenu('clients')}
+                  >
                     <span className="hero-sidebar-dot"></span>
-                    <span>Contacts</span>
-                  </div>
-                  <div className="hero-sidebar-item">
+                    <span>Clients</span>
+                  </button>
+                  <button 
+                    type="button"
+                    className={`hero-sidebar-item ${activeMenu === 'invoices' ? 'active' : ''}`}
+                    onClick={() => setActiveMenu('invoices')}
+                  >
                     <span className="hero-sidebar-dot"></span>
-                    <span>Project</span>
-                  </div>
-                </div>
-
-                <div className="hero-sidebar-section hero-sidebar-section-ghost">
-                  <span className="hero-sidebar-label">Pages</span>
-                  <div className="hero-sidebar-item">
-                    <span className="hero-sidebar-dot"></span>
-                    <span>Authentication</span>
-                  </div>
-                  <div className="hero-sidebar-item">
-                    <span className="hero-sidebar-dot"></span>
-                    <span>Utility</span>
-                  </div>
+                    <span>Invoices</span>
+                  </button>
                 </div>
               </aside>
 
+              {/* Main Dashboard Area */}
               <div className="hero-dashboard-main">
                 <div className="hero-topbar">
                   <div className="hero-searchbar">
                     <span className="hero-search-icon">⌕</span>
-                    <span>Search...</span>
+                    <span>Search client, invoice, or revenue...</span>
                   </div>
                   <div className="hero-topbar-actions">
-                    <div className="hero-chip">Weekly</div>
-                    <div className="hero-chip hero-chip-ghost">Select date</div>
+                    <button 
+                      type="button"
+                      className={`hero-chip ${timeframe === 'weekly' ? 'active' : ''}`}
+                      onClick={() => setTimeframe('weekly')}
+                    >
+                      Weekly
+                    </button>
+                    <button 
+                      type="button"
+                      className={`hero-chip ${timeframe === 'monthly' ? 'active' : ''}`}
+                      onClick={() => setTimeframe('monthly')}
+                    >
+                      Monthly
+                    </button>
                   </div>
                 </div>
 
-                <div className="hero-main-title">Analytics Dashboard</div>
+                {/* TAB 1: DASHBOARD VIEW */}
+                {activeMenu === 'dashboard' && (
+                  <>
+                    <div className="hero-main-title">
+                      Analytics Dashboard <span className="live-tag">● Live</span>
+                    </div>
 
-                <div className="hero-summary-grid">
-                  <div className="hero-summary-card hero-summary-card-highlight">
-                    <p>Upgrade your Dashcode</p>
-                    <h3>Now</h3>
-                    <span>Pro plan for better results</span>
-                  </div>
-                  <div className="hero-summary-card">
-                    <p>Total revenue</p>
-                    <h3>3,564</h3>
-                    <span>Live this month</span>
-                  </div>
-                  <div className="hero-summary-card hero-summary-card-soft">
-                    <p>Products sold</p>
-                    <h3>564</h3>
-                    <span>+5.0% growth</span>
-                  </div>
-                </div>
-
-                <div className="hero-dashboard-grid">
-                  <section className="hero-panel hero-panel-chart">
-                    <div className="hero-panel-header">
-                      <h4>Revenue Report</h4>
-                      <div className="hero-legend-inline">
-                        <span><i className="legend-dot legend-blue"></i>Net profit</span>
-                        <span><i className="legend-dot legend-pink"></i>Revenue</span>
-                        <span><i className="legend-dot legend-peach"></i>Expense</span>
+                    <div className="hero-summary-grid">
+                      <div className="hero-summary-card hero-summary-card-highlight">
+                        <p>Total Revenue</p>
+                        <h3>{timeframe === 'weekly' ? '$12,450.00' : '$45,230.89'}</h3>
+                        <span>+14.8% vs previous period</span>
+                      </div>
+                      <div className="hero-summary-card">
+                        <p>Active Clients</p>
+                        <h3>{timeframe === 'weekly' ? '184' : '564'}</h3>
+                        <span>Verified Accounts</span>
+                      </div>
+                      <div className="hero-summary-card hero-summary-card-soft">
+                        <p>Invoices Cleared</p>
+                        <h3>{timeframe === 'weekly' ? '92%' : '98.5%'}</h3>
+                        <span>Auto-reconciled</span>
                       </div>
                     </div>
-                    <div className="hero-bars" aria-hidden="true">
-                      <span style={{ height: '56%' }}></span>
-                      <span style={{ height: '72%' }}></span>
-                      <span style={{ height: '64%' }}></span>
-                      <span style={{ height: '84%' }}></span>
-                      <span style={{ height: '58%' }}></span>
-                      <span style={{ height: '76%' }}></span>
-                      <span style={{ height: '62%' }}></span>
-                      <span style={{ height: '69%' }}></span>
-                      <span style={{ height: '54%' }}></span>
-                    </div>
-                  </section>
 
-                  <section className="hero-panel hero-panel-overview">
-                    <div className="hero-panel-header">
-                      <h4>Overview</h4>
-                      <span className="hero-kebab">···</span>
+                    <div className="hero-dashboard-grid">
+                      <section className="hero-panel hero-panel-chart">
+                        <div className="hero-panel-header">
+                          <h4>Revenue Overview ({timeframe === 'weekly' ? 'This Week' : 'This Month'})</h4>
+                          <div className="hero-legend-inline">
+                            <span><i className="legend-dot legend-blue"></i>CRM Sales</span>
+                            <span><i className="legend-dot legend-pink"></i>Invoicing</span>
+                            <span><i className="legend-dot legend-peach"></i>Apps</span>
+                          </div>
+                        </div>
+                        <div className="hero-bars" aria-hidden="true">
+                          <span style={{ height: timeframe === 'weekly' ? '56%' : '76%' }}></span>
+                          <span style={{ height: timeframe === 'weekly' ? '72%' : '88%' }}></span>
+                          <span style={{ height: timeframe === 'weekly' ? '64%' : '70%' }}></span>
+                          <span style={{ height: timeframe === 'weekly' ? '84%' : '94%' }}></span>
+                          <span style={{ height: timeframe === 'weekly' ? '58%' : '80%' }}></span>
+                          <span style={{ height: timeframe === 'weekly' ? '76%' : '85%' }}></span>
+                          <span style={{ height: timeframe === 'weekly' ? '62%' : '78%' }}></span>
+                          <span style={{ height: timeframe === 'weekly' ? '69%' : '90%' }}></span>
+                        </div>
+                      </section>
+
+                      <section className="hero-panel hero-panel-overview">
+                        <div className="hero-panel-header">
+                          <h4>System Load</h4>
+                          <span className="hero-kebab">···</span>
+                        </div>
+                        <div className="hero-ring-chart">
+                          <div className="hero-ring hero-ring-blue"></div>
+                          <div className="hero-ring hero-ring-mid"></div>
+                          <div className="hero-ring hero-ring-pink"></div>
+                          <div className="hero-ring-center">
+                            <strong>Efficiency</strong>
+                            <span>99.9%</span>
+                          </div>
+                        </div>
+                      </section>
                     </div>
-                    <div className="hero-ring-chart">
-                      <div className="hero-ring hero-ring-blue"></div>
-                      <div className="hero-ring hero-ring-mid"></div>
-                      <div className="hero-ring hero-ring-pink"></div>
-                      <div className="hero-ring-center">
-                        <strong>Total</strong>
-                        <span>250</span>
+                  </>
+                )}
+
+                {/* TAB 2: CLIENTS VIEW */}
+                {activeMenu === 'clients' && (
+                  <div className="hero-tab-content">
+                    <div className="hero-main-title">
+                      Enterprise Client Accounts <span className="live-tag">● 1,240 Active Accounts</span>
+                    </div>
+
+                    <div className="hero-contacts-table">
+                      <div className="table-header-row">
+                        <span>Client / Company</span>
+                        <span>Platform Plan</span>
+                        <span>MRR</span>
+                        <span>Account Status</span>
+                      </div>
+                      <div className="table-data-row">
+                        <div className="contact-info">
+                          <div className="avatar-circle purple-avatar">AC</div>
+                          <div>
+                            <strong>Acme Logistics Corp</strong>
+                            <small>sarah@acmelogistics.com</small>
+                          </div>
+                        </div>
+                        <span className="stage-badge">Enterprise CRM</span>
+                        <strong>$2,400 / mo</strong>
+                        <span className="status-pill status-green">Active Account</span>
+                      </div>
+                      <div className="table-data-row">
+                        <div className="contact-info">
+                          <div className="avatar-circle blue-avatar">TN</div>
+                          <div>
+                            <strong>TechNova Global</strong>
+                            <small>david@technova.io</small>
+                          </div>
+                        </div>
+                        <span className="stage-badge">Custom Billing</span>
+                        <strong>$4,800 / mo</strong>
+                        <span className="status-pill status-blue">Active Account</span>
+                      </div>
+                      <div className="table-data-row">
+                        <div className="contact-info">
+                          <div className="avatar-circle pink-avatar">BS</div>
+                          <div>
+                            <strong>Bright Solutions</strong>
+                            <small>info@brightsol.com</small>
+                          </div>
+                        </div>
+                        <span className="stage-badge">Web & Mobile</span>
+                        <strong>$3,200 / mo</strong>
+                        <span className="status-pill status-amber">Onboarding</span>
+                      </div>
+                      <div className="table-data-row">
+                        <div className="contact-info">
+                          <div className="avatar-circle green-avatar">AD</div>
+                          <div>
+                            <strong>Apex Digital Systems</strong>
+                            <small>alex@apexdigital.com</small>
+                          </div>
+                        </div>
+                        <span className="stage-badge">Cloud Platform</span>
+                        <strong>$5,600 / mo</strong>
+                        <span className="status-pill status-green">Active Account</span>
+                      </div>
+                      <div className="table-data-row">
+                        <div className="contact-info">
+                          <div className="avatar-circle purple-avatar">VH</div>
+                          <div>
+                            <strong>Vanguard Health Systems</strong>
+                            <small>contact@vanguardhealth.org</small>
+                          </div>
+                        </div>
+                        <span className="stage-badge">Custom ERP</span>
+                        <strong>$7,500 / mo</strong>
+                        <span className="status-pill status-blue">Active Account</span>
                       </div>
                     </div>
-                  </section>
+                  </div>
+                )}
+
+                {/* TAB 3: INVOICES VIEW */}
+                {activeMenu === 'invoices' && (
+                  <div className="hero-tab-content">
+                    <div className="hero-main-title">
+                      Billing & Invoice Ledger <span className="live-tag">● 482 Invoices Issued</span>
+                    </div>
+
+                    <div className="hero-contacts-table">
+                      <div className="table-header-row">
+                        <span>Invoice ID / Client</span>
+                        <span>Issue Date</span>
+                        <span>Amount</span>
+                        <span>Payment Status</span>
+                      </div>
+                      <div className="table-data-row">
+                        <div className="contact-info">
+                          <div className="avatar-circle green-avatar">INV</div>
+                          <div>
+                            <strong>#INV-2026-089</strong>
+                            <small>Acme Logistics Corp</small>
+                          </div>
+                        </div>
+                        <span className="stage-badge">Sep 01, 2026</span>
+                        <strong>$12,450.00</strong>
+                        <span className="status-pill status-green">Paid (Auto)</span>
+                      </div>
+                      <div className="table-data-row">
+                        <div className="contact-info">
+                          <div className="avatar-circle blue-avatar">INV</div>
+                          <div>
+                            <strong>#INV-2026-088</strong>
+                            <small>TechNova Global</small>
+                          </div>
+                        </div>
+                        <span className="stage-badge">Aug 28, 2026</span>
+                        <strong>$8,900.00</strong>
+                        <span className="status-pill status-blue">Paid (Card)</span>
+                      </div>
+                      <div className="table-data-row">
+                        <div className="contact-info">
+                          <div className="avatar-circle pink-avatar">INV</div>
+                          <div>
+                            <strong>#INV-2026-087</strong>
+                            <small>Bright Solutions</small>
+                          </div>
+                        </div>
+                        <span className="stage-badge">Aug 25, 2026</span>
+                        <strong>$14,200.00</strong>
+                        <span className="status-pill status-amber">Pending (Net 30)</span>
+                      </div>
+                      <div className="table-data-row">
+                        <div className="contact-info">
+                          <div className="avatar-circle green-avatar">INV</div>
+                          <div>
+                            <strong>#INV-2026-086</strong>
+                            <small>Apex Digital Systems</small>
+                          </div>
+                        </div>
+                        <span className="stage-badge">Aug 20, 2026</span>
+                        <strong>$6,750.00</strong>
+                        <span className="status-pill status-green">Paid (ACH)</span>
+                      </div>
+                      <div className="table-data-row">
+                        <div className="contact-info">
+                          <div className="avatar-circle purple-avatar">INV</div>
+                          <div>
+                            <strong>#INV-2026-085</strong>
+                            <small>Vanguard Health Systems</small>
+                          </div>
+                        </div>
+                        <span className="stage-badge">Aug 15, 2026</span>
+                        <strong>$18,300.00</strong>
+                        <span className="status-pill status-blue">Paid (Auto)</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Levitating Floating Metric Widgets - Only show on Dashboard tab */}
+            {activeMenu === 'dashboard' && (
+              <>
+                <div className="hero-float-card hero-float-overview">
+                  <div className="hero-float-pill">System Performance</div>
+                  <div className="hero-float-metric">
+                    <span>99.9%</span>
+                    <small>Guaranteed Uptime SLA</small>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <div className="hero-float-card hero-float-overview">
-              <div className="hero-float-pill">Overview</div>
-              <div className="hero-float-metric">
-                <span>80%</span>
-                <small>Today</small>
-              </div>
-            </div>
-
-            <div className="hero-float-card hero-float-progress">
-              <div>
-                <strong>Progress</strong>
-                <p>70% complete</p>
-              </div>
-              <div className="hero-progress-circle">70%</div>
-            </div>
+                <div className="hero-float-card hero-float-progress">
+                  <div>
+                    <strong>Agile Delivery</strong>
+                    <p>98% On-Time Completion</p>
+                  </div>
+                  <div className="hero-progress-circle">100%</div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -375,3 +372,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
