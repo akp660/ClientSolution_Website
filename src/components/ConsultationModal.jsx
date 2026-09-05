@@ -59,7 +59,7 @@ const ConsultationModal = ({ isOpen, onClose }) => {
     setErrorMsg('');
     setIsSubmitting(true);
 
-    const payload = {
+    const emailPayload = {
       _subject: `🤖 AI Assistant Enquiry from ${formData.name}`,
       _template: 'table',
       _captcha: 'false',
@@ -71,14 +71,16 @@ const ConsultationModal = ({ isOpen, onClose }) => {
     };
 
     try {
+      // Send Email via FormSubmit to bbsoftwarecompany@gmail.com
       await fetch('https://formsubmit.co/ajax/bbsoftwarecompany@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           Accept: 'application/json'
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(emailPayload)
       });
+
       setIsSubmitting(false);
       setStep(4);
     } catch (err) {
@@ -91,7 +93,6 @@ const ConsultationModal = ({ isOpen, onClose }) => {
     setStep(1);
     setFormData({ name: '', email: '', phone: '', message: '' });
     setErrorMsg('');
-    onClose();
   };
 
   return (
@@ -116,8 +117,8 @@ const ConsultationModal = ({ isOpen, onClose }) => {
 
         {/* Progress Bar */}
         <div className="chat-progress-bg">
-          <div 
-            className="chat-progress-fill" 
+          <div
+            className="chat-progress-fill"
             style={{ width: step === 1 ? '33%' : step === 2 ? '66%' : step === 3 ? '90%' : '100%' }}
           />
         </div>
@@ -186,7 +187,7 @@ const ConsultationModal = ({ isOpen, onClose }) => {
                 <div className="msg-avatar">🚀</div>
                 <div className="msg-bubble success-bubble">
                   <p><strong>Enquiry Dispatched Successfully! 🎉</strong></p>
-                  <p>Your details have been sent to <span className="email-link">bbsoftwarecompany@gmail.com</span>.</p>
+                  <p>Your details have been sent<span className="email-link"></span>.</p>
                   <div className="summary-list">
                     <div>👤 <strong>Name:</strong> {formData.name}</div>
                     <div>✉️ <strong>Email:</strong> {formData.email}</div>

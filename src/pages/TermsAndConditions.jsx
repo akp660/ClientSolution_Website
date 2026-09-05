@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Navbar from '../components/Navbar';
+import ConsultationModal from '../components/ConsultationModal';
 import termsImage from '../assets/terms_image.png';
 
 const sections = [
@@ -150,6 +151,7 @@ const css = `
 
 const TermsAndConditions = ({ onBack, onPrivacy }) => {
   const [activeId, setActiveId] = useState('about');
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const observerRef = useRef(null);
 
   useEffect(() => {
@@ -461,7 +463,7 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
                 </div>
               </div>
             </div>
-            <button className="tc-cta-btn" onClick={onBack}>
+            <button className="tc-cta-btn" onClick={() => setIsModalOpen(true)}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{width:'16px',height:'16px'}}>
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
               </svg>
@@ -484,6 +486,10 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
           </div>
         </footer>
 
+        <ConsultationModal 
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </div>
     </>
   );

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import ConsultationModal from '../components/ConsultationModal';
 import privacyImage from '../assets/privacy_image.png';
 
 const sections = [
@@ -156,6 +157,7 @@ const css = `
 const PrivacyPolicy = ({ onBack }) => {
   const navigate = useNavigate();
   const [activeId, setActiveId] = useState('introduction');
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const observerRef = useRef(null);
 
   useEffect(() => {
@@ -475,7 +477,7 @@ const PrivacyPolicy = ({ onBack }) => {
                 </div>
               </div>
             </div>
-            <button className="pp-cta-btn" onClick={onBack}>
+            <button className="pp-cta-btn" onClick={() => setIsModalOpen(true)}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{width:'16px',height:'16px'}}>
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
               </svg>
@@ -496,6 +498,10 @@ const PrivacyPolicy = ({ onBack }) => {
           </div>
         </footer>
 
+        <ConsultationModal 
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </div>
     </>
   );
