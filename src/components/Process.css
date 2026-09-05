@@ -4,7 +4,7 @@
 
 .process-section {
   position: relative;
-  background: linear-gradient(180deg, #ffffff 0%, #faf8fc 50%, #ffffff 100%);
+  background: #ffffff;
   padding: 70px 0 80px;
   overflow: hidden;
 }

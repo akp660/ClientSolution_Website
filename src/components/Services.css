@@ -4,7 +4,7 @@
 
 .services {
   position: relative;
-  background: linear-gradient(180deg, #fbfaff 0%, #ffffff 50%, #faf8fc 100%);
+  background: #ffffff;
   padding: 70px 0 70px;
   overflow: hidden;
 }

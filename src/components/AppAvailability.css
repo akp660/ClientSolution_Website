@@ -1,0 +1,352 @@
+/* ─────────────────────────────────────────────────────────────
+   App Availability Component - Standard Container Width & Improved Badge
+   ───────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+.app-availability-section {
+  position: relative;
+  background: #ffffff;
+  padding: 28px 0 20px;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #0f172a;
+}
+
+/* Background Pattern & Ambient Glows */
+.availability-outer-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-dots-pattern {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(#c084fc 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+  opacity: 0.25;
+}
+
+.dots-left {
+  top: 15px;
+  left: 15px;
+}
+
+.dots-right {
+  bottom: 15px;
+  right: 15px;
+}
+
+.bg-gradient-glow.glow-top-purple {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 200px;
+  background: radial-gradient(ellipse, rgba(124, 58, 237, 0.1) 0%, transparent 70%);
+  filter: blur(40px);
+}
+
+/* Container matching global.css --container-width (1200px) */
+.availability-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--container-width, 1200px);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Main White Banner Card
+   ───────────────────────────────────────────────────────────── */
+
+.store-banner-card {
+  position: relative;
+  background: #faf9fe;
+  border-radius: 20px;
+  padding: 26px 38px;
+  border: 1px solid #ede9ff;
+  box-shadow: 0 12px 32px rgba(124, 58, 237, 0.05), 0 2px 6px rgba(0, 0, 0, 0.02);
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .store-banner-card {
+    padding: 20px 18px;
+  }
+}
+
+/* Top Right Handwritten Annotation inside Card */
+.handwritten-annotation {
+  position: absolute;
+  top: -20px;
+  right: 48px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #7c3aed;
+  pointer-events: none;
+}
+
+.curved-arrow {
+  flex-shrink: 0;
+  transform: rotate(-5deg);
+}
+
+.handwritten-text {
+  font-family: 'Architects Daughter', cursive, sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #7c3aed;
+  transform: rotate(2deg);
+  white-space: nowrap;
+}
+
+@media (max-width: 992px) {
+  .handwritten-annotation {
+    display: none;
+  }
+}
+
+.store-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+@media (max-width: 992px) {
+  .store-banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+/* Left Column */
+.banner-left-col {
+  flex: 1;
+  max-width: 400px;
+}
+
+.banner-heading {
+  font-size: 2.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  margin: 0 0 8px;
+}
+
+.purple-text {
+  color: #7c3aed;
+}
+
+.banner-subtext {
+  font-size: 0.88rem;
+  line-height: 1.48;
+  color: #475569;
+  margin: 0;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Right Column: 3 Store App Cards
+   ───────────────────────────────────────────────────────────── */
+
+.banner-cards-col {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .banner-cards-col {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.store-app-card {
+  width: 195px;
+  background: #f8fafc;
+  border: 1px solid #eef2f6;
+  border-radius: 16px;
+  padding: 14px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.store-app-card:hover {
+  transform: translateY(-3px);
+  background: #ffffff;
+  border-color: rgba(124, 58, 237, 0.25);
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.1);
+}
+
+/* App Card Top */
+.app-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.app-icon-square {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.app-rating-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+.rating-score {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #d97706;
+  line-height: 1.1;
+}
+
+.rating-count {
+  font-size: 0.58rem;
+  color: #b45309;
+  font-weight: 500;
+}
+
+/* App Info */
+.app-info-block {
+  margin: 10px 0 12px;
+}
+
+.app-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 2px 0;
+  line-height: 1.2;
+}
+
+.app-platform {
+  font-size: 0.72rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Dark Download Button */
+.dark-download-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #0f172a;
+  border-radius: 10px;
+  padding: 8px 10px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.dark-download-btn:hover {
+  background: #7c3aed;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+}
+
+.btn-brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-labels {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.btn-sub {
+  font-size: 0.54rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #94a3b8;
+  line-height: 1;
+}
+
+.dark-download-btn:hover .btn-sub {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-main {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+}
+
+.btn-arrow {
+  opacity: 0.7;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.dark-download-btn:hover .btn-arrow {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Bottom Slogan Divider Line
+   ───────────────────────────────────────────────────────────── */
+
+.slogan-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.slogan-line {
+  flex: 1;
+  max-width: 140px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+}
+
+.slogan-text {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #6d28d9;
+  text-transform: uppercase;
+}
