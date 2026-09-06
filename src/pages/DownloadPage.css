@@ -36,14 +36,7 @@
   opacity: 0.6;
 }
 
-/* Header / Navbar Overrides */
-.download-page .navbar--fixed {
-  border-bottom: none !important;
-  box-shadow: none !important;
-  background: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-}
+
 
 .dl-header-container {
   max-width: 1200px;
