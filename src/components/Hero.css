@@ -1377,7 +1377,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 112px 0 28px;
+    padding: 100px 0 28px;
   }
 
   .hero-container {
@@ -1386,11 +1386,54 @@
 
   .hero-content {
     max-width: 100%;
+    padding: 0 12px;
   }
 
   .hero-title {
-    font-size: clamp(32px, 9vw, 44px);
+    font-size: clamp(28px, 8.5vw, 40px);
+    line-height: 1.2;
     margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .hero-btn-main {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 15px;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .hero-btn-ghost {
+    width: auto;
+    min-width: 190px;
+    max-width: 230px;
+    justify-content: center;
+    padding: 11px 22px;
+    font-size: 14.5px;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .hero-trust-highlights {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 13.5px;
+    align-items: center;
   }
 
   .hero-visual {
