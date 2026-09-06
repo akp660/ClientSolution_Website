@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <div className="logo">Client Solution<span>.ai</span></div>
+            <div className="logo">Client Solution</div>
             <p>Building smart software solutions for growing businesses.</p>
             <p style={{marginTop: '12px', fontSize: '13px', color: 'var(--primary)'}}>CRM • Billing Software • Web Applications • Mobile Apps • Custom Software Development</p>
           </div>
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Client Solution.ai. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Client Solution. All rights reserved.</p>
           <div className="footer-legal">
             <button
               className="footer-legal-btn"

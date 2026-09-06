@@ -185,7 +185,7 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
     <>
       <SEO 
         title="Terms & Conditions"
-        description="Read the terms of service, conditions, and usage policies for ClientSolution.ai software platforms."
+        description="Read the terms of service, conditions, and usage policies for Client Solution software platforms."
       />
       <style>{css}</style>
       <div className="tc-page">
@@ -198,9 +198,9 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
             <h1 className="tc-hero-title">Terms &amp; Conditions</h1>
             <p className="tc-hero-date">Effective Date: September 5, 2026</p>
             <p className="tc-hero-intro">
-              Welcome to ClientSolution.ai. These Terms and Conditions ("Terms") govern your access to
-              and use of our website, software products, applications, and services. By accessing our
-              website or using any of our services, you agree to comply with these Terms.
+              Welcome to Client Solution. These Terms and Conditions ("Terms") govern your access to
+              and use of our website, custom software solutions, CRM systems, billing platforms,
+              mobile applications, and related services. By accessing our website or using any of our services, you agree to comply with these Terms.
             </p>
             <div className="tc-hero-warning">
               <svg className="tc-hero-warning-icon" viewBox="0 0 20 20" fill="currentColor">
@@ -245,7 +245,7 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
 
             <section id="about" className="tc-sec">
               <div className="tc-sec-head"><span className="tc-num-badge">01</span><h2>About Us</h2></div>
-              <p>ClientSolution.ai is a software development company providing:</p>
+              <p>Client Solution is a software development company providing:</p>
               <ul className="tc-list">
                 <li>Customer Relationship Management (CRM) Software</li>
                 <li>Billing and Invoicing Solutions</li>
@@ -270,7 +270,7 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
 
             <section id="services" className="tc-sec">
               <div className="tc-sec-head"><span className="tc-num-badge">03</span><h2>Services</h2></div>
-              <p>ClientSolution.ai provides software development, consulting, implementation, customization, maintenance, and support services.</p>
+              <p>Client Solution provides software development, consulting, implementation, customization, maintenance, and support services.</p>
               <p>We reserve the right to:</p>
               <ul className="tc-list">
                 <li>Modify or discontinue any service at any time.</li>
@@ -305,9 +305,9 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
 
             <section id="ip" className="tc-sec">
               <div className="tc-sec-head"><span className="tc-num-badge">05</span><h2>Intellectual Property</h2></div>
-              <p>All content, designs, software, source code, logos, trademarks, graphics, and materials available on ClientSolution.ai are the property of ClientSolution.ai or its licensors unless otherwise agreed in writing.</p>
+              <p>All content, designs, software, source code, logos, trademarks, graphics, and materials available on Client Solution are the property of Client Solution or its licensors unless otherwise agreed in writing.</p>
               <div className="tc-note">No content may be copied, reproduced, distributed, or used without prior written permission.</div>
-              <p style={{marginTop:'14px'}}>For custom software projects, ownership rights shall be governed by the specific agreement signed between ClientSolution.ai and the client.</p>
+              <p style={{marginTop:'14px'}}>For custom software projects, ownership rights shall be governed by the specific agreement signed between Client Solution and the client.</p>
             </section>
 
             <section id="projects" className="tc-sec">
@@ -327,13 +327,14 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
               <ul className="tc-list">
                 <li>Payments are non-refundable after work has commenced.</li>
                 <li>Delayed payments may result in suspension of services.</li>
-                <li>ClientSolution.ai reserves the right to charge applicable late payment fees where legally permitted.</li>
+                <li>Client Solution reserves the right to charge applicable late payment fees where legally permitted.</li>
               </ul>
             </section>
 
             <section id="software" className="tc-sec">
               <div className="tc-sec-head"><span className="tc-num-badge">08</span><h2>Software Usage</h2></div>
-              <p>Clients using CRM, Billing Software, School Management Systems, or other applications developed by ClientSolution.ai agree to:</p>
+              <h3 style={{fontSize:'15px',fontWeight:700,color:'#1a1a2e',marginTop:'20px',marginBottom:'8px'}}>8.1 Application Usage</h3>
+              <p>Clients using CRM, Billing Software, School Management Systems, or other applications developed by Client Solution agree to:</p>
               <ul className="tc-list">
                 <li>Use the software only for legitimate business purposes.</li>
                 <li>Maintain the security of their accounts.</li>
@@ -350,7 +351,7 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
                 <li>Ensuring compliance with applicable educational and privacy regulations.</li>
                 <li>Managing user access and credentials within the institution.</li>
               </ul>
-              <div className="tc-note">ClientSolution.ai acts only as a software provider and is not responsible for how institutions collect or use student data.</div>
+              <div className="tc-note">Client Solution acts only as a software provider and is not responsible for how institutions collect or use student data.</div>
             </section>
 
             <section id="privacy" className="tc-sec">
@@ -376,7 +377,7 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
 
             <section id="disclaimer" className="tc-sec">
               <div className="tc-sec-head"><span className="tc-num-badge">12</span><h2>Disclaimer of Warranties</h2></div>
-              <p>Services and software are provided on an "as is" and "as available" basis. To the maximum extent permitted by law, ClientSolution.ai does not guarantee:</p>
+              <p>Services and software are provided on an "as is" and "as available" basis. To the maximum extent permitted by law, Client Solution does not guarantee:</p>
               <ul className="tc-list">
                 <li>Uninterrupted operation</li>
                 <li>Error-free functionality</li>
@@ -387,7 +388,7 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
 
             <section id="liability" className="tc-sec">
               <div className="tc-sec-head"><span className="tc-num-badge">13</span><h2>Limitation of Liability</h2></div>
-              <p>To the fullest extent permitted by law, ClientSolution.ai shall not be liable for:</p>
+              <p>To the fullest extent permitted by law, Client Solution shall not be liable for:</p>
               <ul className="tc-list">
                 <li>Indirect or consequential damages</li>
                 <li>Loss of profits or business opportunities</li>
@@ -399,7 +400,7 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
 
             <section id="indemnify" className="tc-sec">
               <div className="tc-sec-head"><span className="tc-num-badge">14</span><h2>Indemnification</h2></div>
-              <p>You agree to defend, indemnify, and hold harmless ClientSolution.ai, its employees, partners, and affiliates from claims, liabilities, damages, and expenses arising from:</p>
+              <p>You agree to defend, indemnify, and hold harmless Client Solution, its employees, partners, and affiliates from claims, liabilities, damages, and expenses arising from:</p>
               <ul className="tc-list">
                 <li>Your misuse of our services</li>
                 <li>Violation of these Terms</li>
@@ -480,8 +481,8 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
         {/* ── Page Footer ── */}
         <footer className="tc-page-footer">
           <div className="tc-page-footer-inner">
-            <div className="tc-pf-logo">Client Solution<span>.ai</span></div>
-            <p className="tc-pf-copy">© {new Date().getFullYear()} Client Solution.ai. All rights reserved.</p>
+            <div className="tc-pf-logo">Client Solution</div>
+            <p className="tc-pf-copy">© {new Date().getFullYear()} Client Solution. All rights reserved.</p>
             <div className="tc-pf-legal">
               {onPrivacy && (
                 <button className="tc-pf-link" onClick={onPrivacy}>Privacy Policy</button>

@@ -4,9 +4,9 @@ const SEO = ({ title, description, keywords }) => {
   useEffect(() => {
     // 1. Update Title
     if (title) {
-      document.title = `${title} | Client Solution.ai`;
+      document.title = `${title} | Client Solution`;
     } else {
-      document.title = 'Client Solution.ai | Custom CRMs, Billing Engines & Cloud Software';
+      document.title = 'Client Solution | Custom CRMs, Billing Engines & Cloud Software';
     }
 
     // 2. Update Description

@@ -129,7 +129,7 @@ const ConsultationModal = ({ isOpen, onClose }) => {
           <div className="chat-msg bot-msg animate-fade-in">
             <div className="msg-avatar">🤖</div>
             <div className="msg-bubble">
-              <p>Hello! 👋 Welcome to <strong>Client Solution.ai</strong>.</p>
+              <p>Hello! 👋 Welcome to <strong>Client Solution</strong>.</p>
               <p>What is your <strong>Full Name</strong>?</p>
             </div>
           </div>

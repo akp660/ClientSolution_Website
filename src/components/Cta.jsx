@@ -35,7 +35,7 @@ const Cta = () => {
             <div className="testimonial-card">
               <div className="testimonial-stars">★★★★★</div>
               <p className="quote-text">
-                "Client Solution.ai transformed our customer management and billing workflows. Their custom platform boosted our team productivity by 40% in just two months."
+                "Client Solution transformed our customer management and billing workflows. Their custom platform boosted our team productivity by 40% in just two months."
               </p>
               <div className="testimonial-footer">
                 <div className="author">
@@ -67,7 +67,7 @@ const Cta = () => {
             <div className="testimonial-card">
               <div className="testimonial-stars">★★★★★</div>
               <p className="quote-text">
-                "Working with Client Solution.ai was seamless from architectural review to cloud deployment. They delivered our cross-platform app 2 weeks ahead of schedule."
+                "Working with Client Solution was seamless from architectural review to cloud deployment. They delivered our cross-platform app 2 weeks ahead of schedule."
               </p>
               <div className="testimonial-footer">
                 <div className="author">

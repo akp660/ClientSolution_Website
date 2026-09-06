@@ -12,7 +12,7 @@ const Navbar = ({ onBackToLanding, fixed }) => {
           onClick={onBackToLanding}
           style={{ cursor: 'pointer' }}
         >
-          Client Solution<span>.ai</span>
+          Client Solution
         </div>
 
         <nav className="nav-links">

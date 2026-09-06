@@ -37,7 +37,7 @@ const Landing = ({ onEnter }) => {
         <div className="landing-container navbar-content">
           <div className="landing-logo">
             <div className="logo-circle">CS</div>
-            <span>Client Solution.Ai</span>
+            <span>Client Solution</span>
           </div>
           {/*<div className="nav-buttons">
             <button className="btn-login" onClick={onLogin}>Log In</button>

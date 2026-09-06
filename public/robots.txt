@@ -1,4 +1,4 @@
-# robots.txt for Client Solution.ai
+# robots.txt for Client Solution
 User-agent: *
 Allow: /
 

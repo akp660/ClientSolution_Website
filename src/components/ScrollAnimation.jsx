@@ -39,7 +39,7 @@ const ScrollAnimation = () => {
     <section className="scroll-animation-section" ref={sectionRef}>
       <div className="gradient-background"></div>
       <div className={`text-container ${isVisible ? 'visible' : ''}`}>
-        <h2 className="reveal-text">client solution <span className="highlight">.ai</span></h2>
+        <h2 className="reveal-text">client solution</h2>
       </div>
     </section>
   );

@@ -191,7 +191,7 @@ const PrivacyPolicy = ({ onBack }) => {
     <>
       <SEO 
         title="Privacy Policy"
-        description="Learn how ClientSolution.ai collects, protects, and handles user data in compliance with data privacy standards."
+        description="Learn how Client Solution collects, protects, and handles user data in compliance with data privacy standards."
       />
       <style>{css}</style>
       <div className="pp-page">
@@ -204,7 +204,7 @@ const PrivacyPolicy = ({ onBack }) => {
             <h1 className="pp-hero-title">Privacy Policy</h1>
             <p className="pp-hero-date">Effective Date: September 5, 2026</p>
             <p className="pp-hero-intro">
-              At ClientSolution.ai, we take your privacy seriously, and so we are committed to
+              At Client Solution, we take your privacy seriously, and so we are committed to
               protecting your personal information. This Privacy Policy explains how we collect, use,
               disclose, and protect information when you visit our website, contact us, or use any of
               our software products and services.
@@ -257,7 +257,7 @@ const PrivacyPolicy = ({ onBack }) => {
                 <h2>Introduction</h2>
               </div>
               <p>
-                ClientSolution.ai ("Company", "we", "our", or "us") is committed to protecting the
+                Client Solution ("Company", "we", "our", or "us") is committed to protecting the
                 privacy and security of our clients, website visitors, and users. This Privacy Policy
                 explains how we collect, use, disclose, and protect information when you visit our
                 website, contact us, or use any of our software products and services.
@@ -273,9 +273,9 @@ const PrivacyPolicy = ({ onBack }) => {
             <section id="about" className="pp-sec">
               <div className="pp-sec-head">
                 <span className="pp-num-badge">02</span>
-                <h2>About ClientSolution.ai</h2>
+                <h2>About Client Solution</h2>
               </div>
-              <p>ClientSolution.ai is a software development company providing technology solutions including:</p>
+              <p>Client Solution is a software development company providing technology solutions including:</p>
               <ul className="pp-list">
                 <li>Customer Relationship Management (CRM) Software</li>
                 <li>Billing and Invoicing Solutions</li>
@@ -398,9 +398,9 @@ const PrivacyPolicy = ({ onBack }) => {
 
             <section id="school-mgmt" className="pp-sec">
               <div className="pp-sec-head"><span className="pp-num-badge">09</span><h2>School Management Systems</h2></div>
-              <p>ClientSolution.ai develops School Management Systems for educational institutions.</p>
+              <p>Client Solution develops School Management Systems for educational institutions.</p>
               <p>Any student, parent, teacher, or staff information processed through such systems belongs to the respective educational institution. The institution is responsible for obtaining necessary permissions and complying with applicable privacy laws.</p>
-              <div className="pp-note">ClientSolution.ai processes such information solely for providing and maintaining the software services requested by the institution.</div>
+              <div className="pp-note">Client Solution processes such information solely for providing and maintaining the software services requested by the institution.</div>
             </section>
 
             <section id="third-party" className="pp-sec">
@@ -494,8 +494,8 @@ const PrivacyPolicy = ({ onBack }) => {
         {/* ── Page Footer ── */}
         <footer className="pp-page-footer">
           <div className="pp-page-footer-inner">
-            <div className="pp-pf-logo">Client Solution<span>.ai</span></div>
-            <p className="pp-pf-copy">© {new Date().getFullYear()} Client Solution.ai. All rights reserved.</p>
+            <div className="pp-pf-logo">Client Solution</div>
+            <p className="pp-pf-copy">© {new Date().getFullYear()} Client Solution. All rights reserved.</p>
             <div className="pp-pf-legal">
               <button className="pp-pf-link active" onClick={onBack}>Privacy Policy</button>
               <button className="pp-pf-link" onClick={() => { navigate('/terms'); window.scrollTo({top:0,behavior:'smooth'}); }}>Terms &amp; Conditions</button>
