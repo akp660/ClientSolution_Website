@@ -6,21 +6,21 @@ import SEO from '../components/SEO';
 import privacyImage from '../assets/privacy_image.png';
 
 const sections = [
-  { id: 'introduction',   num: '01', label: 'Introduction' },
-  { id: 'about',          num: '02', label: 'About Us' },
-  { id: 'info-collect',   num: '03', label: 'Information We Collect' },
-  { id: 'how-use',        num: '04', label: 'How We Use Information' },
-  { id: 'cookies',        num: '05', label: 'Cookies and Analytics' },
-  { id: 'data-sharing',   num: '06', label: 'Data Sharing and Disclosure' },
-  { id: 'data-security',  num: '07', label: 'Data Security' },
+  { id: 'introduction', num: '01', label: 'Introduction' },
+  { id: 'about', num: '02', label: 'About Us' },
+  { id: 'info-collect', num: '03', label: 'Information We Collect' },
+  { id: 'how-use', num: '04', label: 'How We Use Information' },
+  { id: 'cookies', num: '05', label: 'Cookies and Analytics' },
+  { id: 'data-sharing', num: '06', label: 'Data Sharing and Disclosure' },
+  { id: 'data-security', num: '07', label: 'Data Security' },
   { id: 'data-retention', num: '08', label: 'Data Retention' },
-  { id: 'school-mgmt',    num: '09', label: 'School Management Systems' },
-  { id: 'third-party',    num: '10', label: 'Third Party Services' },
-  { id: 'your-rights',    num: '11', label: 'Your Privacy Rights' },
-  { id: 'childrens',      num: '12', label: "Children's Privacy" },
-  { id: 'international',  num: '13', label: 'International Data Transfers' },
-  { id: 'changes',        num: '14', label: 'Changes to This Policy' },
-  { id: 'contact',        num: '15', label: 'Contact Us' },
+  { id: 'school-mgmt', num: '09', label: 'School Management Systems' },
+  { id: 'third-party', num: '10', label: 'Third Party Services' },
+  { id: 'your-rights', num: '11', label: 'Your Privacy Rights' },
+  { id: 'childrens', num: '12', label: "Children's Privacy" },
+  { id: 'international', num: '13', label: 'International Data Transfers' },
+  { id: 'changes', num: '14', label: 'Changes to This Policy' },
+  { id: 'contact', num: '15', label: 'Contact Us' },
 ];
 
 const css = `
@@ -189,7 +189,7 @@ const PrivacyPolicy = ({ onBack }) => {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Privacy Policy"
         description="Learn how Client Solution collects, protects, and handles user data in compliance with data privacy standards."
       />
@@ -297,7 +297,7 @@ const PrivacyPolicy = ({ onBack }) => {
                 <div className="pp-info-card">
                   <div className="pp-info-card-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
                     </svg>
                   </div>
                   <h3>Personal Information</h3>
@@ -310,7 +310,7 @@ const PrivacyPolicy = ({ onBack }) => {
                 <div className="pp-info-card">
                   <div className="pp-info-card-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+                      <rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" />
                     </svg>
                   </div>
                   <h3>Technical Information</h3>
@@ -323,7 +323,7 @@ const PrivacyPolicy = ({ onBack }) => {
                 <div className="pp-info-card">
                   <div className="pp-info-card-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/>
+                      <ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" /><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3" />
                     </svg>
                   </div>
                   <h3>Client Data</h3>
@@ -462,7 +462,7 @@ const PrivacyPolicy = ({ onBack }) => {
               <div className="pp-cta-contact-item">
                 <div className="pp-cta-contact-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    <rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
                 </div>
                 <div>
@@ -473,18 +473,18 @@ const PrivacyPolicy = ({ onBack }) => {
               <div className="pp-cta-contact-item">
                 <div className="pp-cta-contact-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    <circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                   </svg>
                 </div>
                 <div>
                   <p className="pp-cta-contact-label">Our Office</p>
-                  <a href="https://clientsolution.ai" target="_blank" rel="noreferrer" className="pp-cta-contact-val">https://clientsolution.ai</a>
+                  <a href="https://clientsolution.in" target="_blank" rel="noreferrer" className="pp-cta-contact-val">https://clientsolution.in</a>
                 </div>
               </div>
             </div>
             <button className="pp-cta-btn" onClick={() => setIsModalOpen(true)}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{width:'16px',height:'16px'}}>
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
               </svg>
               Contact Us
             </button>
@@ -498,12 +498,12 @@ const PrivacyPolicy = ({ onBack }) => {
             <p className="pp-pf-copy">© {new Date().getFullYear()} Client Solution. All rights reserved.</p>
             <div className="pp-pf-legal">
               <button className="pp-pf-link active" onClick={onBack}>Privacy Policy</button>
-              <button className="pp-pf-link" onClick={() => { navigate('/terms'); window.scrollTo({top:0,behavior:'smooth'}); }}>Terms &amp; Conditions</button>
+              <button className="pp-pf-link" onClick={() => { navigate('/terms'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Terms &amp; Conditions</button>
             </div>
           </div>
         </footer>
 
-        <ConsultationModal 
+        <ConsultationModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
         />

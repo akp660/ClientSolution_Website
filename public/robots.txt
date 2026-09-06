@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://clientsolution.ai/sitemap.xml
+Sitemap: https://clientsolution.in/sitemap.xml

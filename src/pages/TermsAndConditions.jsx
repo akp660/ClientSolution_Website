@@ -5,24 +5,24 @@ import SEO from '../components/SEO';
 import termsImage from '../assets/terms_image.png';
 
 const sections = [
-  { id: 'about',        num: '01', label: 'About Us' },
-  { id: 'acceptance',   num: '02', label: 'Acceptance of Terms' },
-  { id: 'services',     num: '03', label: 'Services' },
-  { id: 'user-resp',    num: '04', label: 'User Responsibilities' },
-  { id: 'ip',           num: '05', label: 'Intellectual Property' },
-  { id: 'projects',     num: '06', label: 'Client Projects' },
-  { id: 'payments',     num: '07', label: 'Payments' },
-  { id: 'software',     num: '08', label: 'Software Usage' },
-  { id: 'school',       num: '09', label: 'School Management Systems' },
-  { id: 'privacy',      num: '10', label: 'Privacy' },
-  { id: 'third-party',  num: '11', label: 'Third-Party Services' },
-  { id: 'disclaimer',   num: '12', label: 'Disclaimer of Warranties' },
-  { id: 'liability',    num: '13', label: 'Limitation of Liability' },
-  { id: 'indemnify',    num: '14', label: 'Indemnification' },
-  { id: 'termination',  num: '15', label: 'Termination' },
-  { id: 'changes',      num: '16', label: 'Changes to These Terms' },
-  { id: 'law',          num: '17', label: 'Governing Law' },
-  { id: 'contact',      num: '18', label: 'Contact Us' },
+  { id: 'about', num: '01', label: 'About Us' },
+  { id: 'acceptance', num: '02', label: 'Acceptance of Terms' },
+  { id: 'services', num: '03', label: 'Services' },
+  { id: 'user-resp', num: '04', label: 'User Responsibilities' },
+  { id: 'ip', num: '05', label: 'Intellectual Property' },
+  { id: 'projects', num: '06', label: 'Client Projects' },
+  { id: 'payments', num: '07', label: 'Payments' },
+  { id: 'software', num: '08', label: 'Software Usage' },
+  { id: 'school', num: '09', label: 'School Management Systems' },
+  { id: 'privacy', num: '10', label: 'Privacy' },
+  { id: 'third-party', num: '11', label: 'Third-Party Services' },
+  { id: 'disclaimer', num: '12', label: 'Disclaimer of Warranties' },
+  { id: 'liability', num: '13', label: 'Limitation of Liability' },
+  { id: 'indemnify', num: '14', label: 'Indemnification' },
+  { id: 'termination', num: '15', label: 'Termination' },
+  { id: 'changes', num: '16', label: 'Changes to These Terms' },
+  { id: 'law', num: '17', label: 'Governing Law' },
+  { id: 'contact', num: '18', label: 'Contact Us' },
 ];
 
 const css = `
@@ -183,7 +183,7 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Terms & Conditions"
         description="Read the terms of service, conditions, and usage policies for Client Solution software platforms."
       />
@@ -307,7 +307,7 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
               <div className="tc-sec-head"><span className="tc-num-badge">05</span><h2>Intellectual Property</h2></div>
               <p>All content, designs, software, source code, logos, trademarks, graphics, and materials available on Client Solution are the property of Client Solution or its licensors unless otherwise agreed in writing.</p>
               <div className="tc-note">No content may be copied, reproduced, distributed, or used without prior written permission.</div>
-              <p style={{marginTop:'14px'}}>For custom software projects, ownership rights shall be governed by the specific agreement signed between Client Solution and the client.</p>
+              <p style={{ marginTop: '14px' }}>For custom software projects, ownership rights shall be governed by the specific agreement signed between Client Solution and the client.</p>
             </section>
 
             <section id="projects" className="tc-sec">
@@ -333,7 +333,7 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
 
             <section id="software" className="tc-sec">
               <div className="tc-sec-head"><span className="tc-num-badge">08</span><h2>Software Usage</h2></div>
-              <h3 style={{fontSize:'15px',fontWeight:700,color:'#1a1a2e',marginTop:'20px',marginBottom:'8px'}}>8.1 Application Usage</h3>
+              <h3 style={{ fontSize: '15px', fontWeight: 700, color: '#1a1a2e', marginTop: '20px', marginBottom: '8px' }}>8.1 Application Usage</h3>
               <p>Clients using CRM, Billing Software, School Management Systems, or other applications developed by Client Solution agree to:</p>
               <ul className="tc-list">
                 <li>Use the software only for legitimate business purposes.</li>
@@ -358,8 +358,8 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
               <div className="tc-sec-head"><span className="tc-num-badge">10</span><h2>Privacy</h2></div>
               <p>Your use of our services is also governed by our Privacy Policy. By using our services, you consent to the collection and processing of information as described in our Privacy Policy.</p>
               {onPrivacy && (
-                <div className="tc-note" style={{cursor:'pointer'}} onClick={onPrivacy}>
-                  📄 View our <strong style={{color:'#6366f1'}}>Privacy Policy →</strong>
+                <div className="tc-note" style={{ cursor: 'pointer' }} onClick={onPrivacy}>
+                  📄 View our <strong style={{ color: '#6366f1' }}>Privacy Policy →</strong>
                 </div>
               )}
             </section>
@@ -449,7 +449,7 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
               <div className="tc-cta-contact-item">
                 <div className="tc-cta-contact-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    <rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
                 </div>
                 <div>
@@ -460,18 +460,18 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
               <div className="tc-cta-contact-item">
                 <div className="tc-cta-contact-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    <circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                   </svg>
                 </div>
                 <div>
                   <p className="tc-cta-contact-label">Website</p>
-                  <a href="https://clientsolution.ai" target="_blank" rel="noreferrer" className="tc-cta-contact-val">https://clientsolution.ai</a>
+                  <a href="https://clientsolution.in" target="_blank" rel="noreferrer" className="tc-cta-contact-val">https://clientsolution.in</a>
                 </div>
               </div>
             </div>
             <button className="tc-cta-btn" onClick={() => setIsModalOpen(true)}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{width:'16px',height:'16px'}}>
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
               </svg>
               Contact Us
             </button>
@@ -492,7 +492,7 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
           </div>
         </footer>
 
-        <ConsultationModal 
+        <ConsultationModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
         />
