@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './AppAvailability.css';
 
 const storeCards = [
@@ -77,6 +78,7 @@ const storeCards = [
 ];
 
 const AppAvailability = () => {
+  const navigate = useNavigate();
   return (
     <section className="app-availability-section" id="availability">
       {/* Outer Section Background */}
@@ -135,7 +137,7 @@ const AppAvailability = () => {
                   </div>
 
                   {/* Dark Download Pill Button */}
-                  <button type="button" className="dark-download-btn" onClick={(e) => e.preventDefault()}>
+                  <button type="button" className="dark-download-btn" onClick={() => navigate('/download')}>
                     <div className="btn-brand-icon">
                       {card.btnIcon}
                     </div>

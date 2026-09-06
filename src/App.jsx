@@ -5,6 +5,7 @@ import SignUp from './pages/SignUp';
 import Home from './pages/Home';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
+import DownloadPage from './pages/DownloadPage';
 
 function App() {
   const navigate = useNavigate();
@@ -41,6 +42,10 @@ function App() {
             onPrivacy={() => navigate('/privacy')}
           />
         }
+      />
+      <Route
+        path="/download"
+        element={<DownloadPage />}
       />
       <Route
         path="/"

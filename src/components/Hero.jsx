@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ConsultationModal from './ConsultationModal';
 import './Hero.css';
 
 const Hero = () => {
+  const navigate = useNavigate();
   const [activeMenu, setActiveMenu] = useState('dashboard');
   const [timeframe, setTimeframe] = useState('weekly');
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
@@ -33,14 +35,18 @@ const Hero = () => {
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </button>
-            <a href="#download" className="btn-secondary hero-btn-ghost">
+            <button 
+              type="button" 
+              className="btn-secondary hero-btn-ghost"
+              onClick={() => navigate('/download')}
+            >
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
                 <line x1="12" y1="15" x2="12" y2="3"></line>
               </svg>
               <span>Download Now</span>
-            </a>
+            </button>
           </div>
 
           <div className="hero-trust-highlights">
