@@ -1,7 +1,5 @@
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Landing from './pages/Landing';
-import Login from './pages/Login';
-import SignUp from './pages/SignUp';
 import Home from './pages/Home';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
@@ -17,18 +15,8 @@ function App() {
         element={
           <Landing
             onEnter={() => navigate('/')}
-            onLogin={() => navigate('/login')}
-            onSignUp={() => navigate('/signup')}
           />
         }
-      />
-      <Route
-        path="/login"
-        element={<Login onBackToLanding={() => navigate('/')} />}
-      />
-      <Route
-        path="/signup"
-        element={<SignUp onBackToLanding={() => navigate('/')} />}
       />
       <Route
         path="/privacy"

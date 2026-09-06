@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import ConsultationModal from '../components/ConsultationModal';
+import SEO from '../components/SEO';
 import termsImage from '../assets/terms_image.png';
 
 const sections = [
@@ -182,6 +183,10 @@ const TermsAndConditions = ({ onBack, onPrivacy }) => {
 
   return (
     <>
+      <SEO 
+        title="Terms & Conditions"
+        description="Read the terms of service, conditions, and usage policies for ClientSolution.ai software platforms."
+      />
       <style>{css}</style>
       <div className="tc-page">
         {/* Fixed Navbar */}

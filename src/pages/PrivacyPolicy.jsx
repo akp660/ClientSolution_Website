@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import ConsultationModal from '../components/ConsultationModal';
+import SEO from '../components/SEO';
 import privacyImage from '../assets/privacy_image.png';
 
 const sections = [
@@ -188,6 +189,10 @@ const PrivacyPolicy = ({ onBack }) => {
 
   return (
     <>
+      <SEO 
+        title="Privacy Policy"
+        description="Learn how ClientSolution.ai collects, protects, and handles user data in compliance with data privacy standards."
+      />
       <style>{css}</style>
       <div className="pp-page">
         {/* Fixed Navbar */}

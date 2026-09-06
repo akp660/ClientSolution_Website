@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import appPreviewImg from '../assets/app_download_preview.jpg';
 import './DownloadPage.css';
 
@@ -106,6 +107,10 @@ const DownloadPage = () => {
 
   return (
     <div className="download-page">
+      <SEO 
+        title="Download Native Apps (Coming Soon)"
+        description="Download Client Solution native applications for macOS, Windows, iOS, and Android with instant sync across all your devices."
+      />
       {/* Background ambient lighting */}
       <div className="dl-bg-glow-top"></div>
       <div className="dl-bg-dots"></div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Landing.css';
 import dashboardImg from '../assets/dashboard.png';
 
-const Landing = ({ onEnter, onLogin, onSignUp }) => {
+const Landing = ({ onEnter }) => {
   const [isHovered, setIsHovered] = useState(null);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
 
